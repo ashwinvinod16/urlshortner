@@ -1,0 +1,14 @@
+
+<div class="container-fluid">
+    <p><strong> Url Shortner</strong> </p>
+   <div class="card card-prop"  >
+       <h1>Paste the URL to be shortened</h1>
+       <form [formGroup]="urlform" (submit)="sendata()">
+        <input class="formsize" type="text" formControlName="urlName" placeholder="Enter the Link here" >
+        <input class="button" type="submit" value="Shorten Url">
+        </form>
+        <div class="result" *ngIf="isvalid">
+          <span>https://localhost:4200/{{short}}</span>
+        </div>
+   </div>
+</div>
