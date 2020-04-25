@@ -9,9 +9,9 @@ export class UrlserviceService {
 
   constructor(private http:HttpClient) { }
   posturl(data):Observable<any>{
-    return this.http.post(`https://urlshortnernode.herokuapp.com/urlsaving`,data)
+    return this.http.post(`https://urlshortnernode.herokuapp.com/`,data)
   }
   redirecturl(id):Observable<any>{
-    return this.http.get(`https://urlshortnernode.herokuapp.com/urlsaving/`+id)
+    return this.http.get(`https://urlshortnernode.herokuapp.com/`+id)
   }
 }
